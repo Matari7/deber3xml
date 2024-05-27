@@ -12,12 +12,10 @@
     <pre id="output"></pre>
 
     <script>
-        const apiUrl = process.env.NODE_ENV === 'production' 
-            ? 'https://deber3xml-n87jf.ondigitalocean.app/api/data' 
-            : 'http://localhost:3000/api/data';
+        const apiUrl ='https://deber3xml-n87jf.ondigitalocean.app/api/data';
        
         document.getElementById('fetchButton').addEventListener('click', () => {
-            fetch(apiUrl)
+            fetch(apiUrl) /*fetch ('http://localhost:3000/api/data')*/
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('output').textContent = data;
