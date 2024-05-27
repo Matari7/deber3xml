@@ -12,8 +12,12 @@
     <pre id="output"></pre>
 
     <script>
+        const apiUrl = process.env.NODE_ENV === 'production' 
+            ? 'https://deber3xml-n87jf.ondigitalocean.app/api/data' 
+            : 'http://localhost:3000/api/data';
+       
         document.getElementById('fetchButton').addEventListener('click', () => {
-            fetch('http://localhost:3000/api/data')
+            fetch(apiUrl)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('output').textContent = data;
@@ -29,7 +33,7 @@
                 </user>
             `;
 
-            fetch('http://localhost:3000/api/data', {
+            fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/xml',
