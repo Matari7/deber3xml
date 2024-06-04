@@ -1,0 +1,6 @@
+ debo cambiar la */*/*/constante apiURL https://deber3xml-n87jf.ondigitalocean.app/api/data
+
+Utiliza los métodos HTTP adecuadamente (GET para obtener datos y POST para enviar datos).
+La comunicación entre cliente y servidor es stateless.
+La interfaz está claramente definida y usa XML como formato de intercambio de datos.
+Es una app API rest
